@@ -12,11 +12,7 @@ function submitReview() {
 
     window.location.href = `mailto:anonyminhack5@protonmail.com?subject=${subject}&body=${body}`;
 
-    swal("Hurry", "Thank you for your review, you will be redirected to the home page in 3s..", "success");
-    setTimeout(() => {
-        window.location.href = "index.html";
-    }, 3000);
-    
+    swal("Hurry", "Thank you for your review", "success");
     form.reset();
 
     
