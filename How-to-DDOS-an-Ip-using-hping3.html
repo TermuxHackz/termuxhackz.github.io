@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="AnonyminHack5">
+  <meta name="keywords" content="DDOs attacks, TermuxHackz Society">
+  <meta name="description" content="How to ddos an ip address using hping3 in kali linux, this tutorials are only for educational purposes and not meant for harm.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="True" name="HandheldFriendly"/>
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>How to ddos an ip address in kali linux</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+<link rel="icon" type="image/ico" href="favicon_io/favicon.ico">
+
+
+  <link rel="stylesheet" type="text/css" href="css/themify-icons.css">
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4632714155798915"
+     crossorigin="anonymous"></script>
+
+<div id="container">
+    <div class="message">
+  <script>
+  window.addEventListener('contextmenu', function (e) {
+    // do something here...
+    alert("You cannot right click here");
+    e.preventDefault();
+  }, false);
+  </script>
+</div>
+</div>
+  <link rel="stylesheet" type="text/css" href="vendor/owl-carousel/owl.carousel.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/nice-select/css/nice-select.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/fancybox/css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/maicons.css">
+
+  <link rel="stylesheet" type="text/css" href="css/virtual.css">
+
+  <link rel="stylesheet" type="text/css" href="css/topbar.virtual.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body class="theme-red">
+
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <span class="ti-arrow-up"></span>
+  </div>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
+
+<style>
+p {
+user-select: none;
+}
+body {
+user-select: none;
+font-family: 'Stick No Bills', sans-serif;
+}
+</style>
+<noscript>
+  <div class="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999;">
+    <div class="popup-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #fff;">
+      <h2 style="color: red;">Oops!!, JavaScript disabled in your browser!</h2>
+      <p style="color: black;">This site uses Javascript, Please enable JavaScript from your browser settings to use this website.</p>
+    </div>
+  </div>
+</noscript>
+  <body oncontextmenu="return false;">
+
+  <!-- Setting button -->
+  <div class="config">
+    <div class="template-config">
+      <!-- Settings -->
+      <div class="d-block">
+        <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><span class="ti-settings"></span></button>
+      </div>
+      <!-- Help -->
+      <div class="d-block">
+        <a href="mailto:AnonyminHack5@protonmail.com" class="btn btn-fab btn-sm" title="Help" data-toggle="tooltip" data-placement="left"><span class="ti-help"></span></a>
+      </div>
+    </div>
+    <div class="set-menu">
+      <p>Select Color</p>
+      <div class="color-bar" data-toggle="selected">
+        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>
+        <span class="color-item bg-theme-blue" data-class="theme-blue"></span>
+        <span class="color-item bg-theme-green" data-class="theme-green"></span>
+        <span class="color-item bg-theme-orange" data-class="theme-orange"></span>
+        <span class="color-item bg-theme-purple" data-class="theme-purple"></span>
+      </div>
+    </div>
+  </div>
+  <style>
+        .mode {
+            float:right;
+        }
+        .change {
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 8px;
+        }
+        .dark{
+            background-color: #222;
+            color: #e6e6e6;
+        }
+    </style>
+    <br/>
+
+  <div class="vg-page page-home" id="home" style="float: left; height: 490px; background-image: url(img/bg_image_1.jpg)">
+    <!-- Navbar -->
+  <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
+      <div class="container">
+        <a href="" class="navbar-brand">TermuxHackz Society</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
+          <span class="ti-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="index.html" class="nav-link" data-animate="scrolling">Home</a>
+            </li>
+             <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+          <ul class="nav ml-auto">
+            <li class="nav-item">
+              <button class="btn btn-fab btn-theme no-shadow">En</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- End Navbar -->
+   <!-- Caption header -->
+    <div class="caption-header text-center wow zoomInDown">
+      <h5 class="fw-normal">Welcome</h5>
+      <h1 class="fw-light mb-4">I'm <b class="fg-theme">AnonyminHack5 </b> Tech.</h1>
+      <div class="badge">Web Designer & Programmer</div>
+    </div> <!-- End Caption header -->
+    <div class="floating-button"><span class="ti-mouse"></span></div>
+  </div>
+
+  <br>
+  <br>
+  	<div class="mode">
+        	<b>Dark mode:</b>
+        <span class="change">OFF</span>
+    	</div>
+
+    	<script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
+    <br/>
+    <br>
+    <br>
+    <br>
+  	<div class="col-lg-6 offset-lg-1 wow fadeInRight">
+  		<h1 class="fw-light"><b>How to ddos an ip address in kali linux using hping3</b></h1>
+   <p class="text-muted">This Section</b> of this site will teach you how to dos/ddos an ip address right from your kali linux terminal</p>
+  <br>
+
+  	<h4><b>What is a DDOS/Dos attack?</b></h4>
+    <p>A Denial-of-Service (DoS) attack is an attack meant to shut down a machine or network, making it inaccessible to its intended users. DoS attacks accomplish this by flooding the target with traffic or sending it information that triggers a crash. In both instances, the DoS attack deprives legitimate users (i.e. employees, members, or account holders) of the service or resource they expected.
+Victims of DoS attacks often target web servers of high-profile organizations such as banking, commerce, and media companies, or government and trade organizations. Though DoS attacks do not typically result in the theft or loss of significant information or other assets, they can cost the victim a great deal of time and money to handle.
+There are two general methods of DoS attacks: flooding services or crashing services. Flood attacks occur when the system receives too much traffic for the server to buffer, causing them to slow down and eventually stop. Popular flood attacks include:
+· Buffer overflow attacks — the most common DoS attack. The concept is to send more traffic to a network address than the programmers have built the system to handle. It includes the attacks listed below, in addition to others that are designed to exploit bugs specific to certain applications or networks
+· ICMP flood — leverages misconfigured network devices by sending spoofed packets that ping every computer on the targeted network, instead of just one specific machine. The network is then triggered to amplify the traffic. This attack is also known as the smurf attack or ping of death.
+· SYN flood — sends a request to connect to a server, but never completes the handshake. Continues until all open ports are saturated with requests and none are available for legitimate users to connect to.
+DDOS Attacks: A DDoS attack occurs when multiple systems orchestrate a synchronized DoS attack to a single target. The essential difference is that instead of being attacked from one location, the target is attacked from many locations at once. The distribution of hosts that defines a DDoS provide the attacker multiple advantages: He can leverage the greater volume of machine to execute a seriously disruptive attack
+The location of the attack is difficult to detect due to the random distribution of attacking systems (often worldwide)
+It is more difficult to shut down multiple machines than one.
+The true attacking party is very difficult to identify, as they are disguised behind many (mostly compromised) systems
+Modern security technologies have developed mechanisms to defend against most forms of DoS attacks, but due to the unique characteristics of DDoS, it is still regarded as an elevated threat and is of higher concern to organizations that fear being targeted by such an attack.<br>
+DOS attack using hping3 command: </p>
+  <br>
+    <h4><b>What is hping3</b></h4>
+    <p>hping3 is a network tool able to send custom TCP/IP packets and to display target replies like ping program does with ICMP replies. hping3 handle fragmentation, arbitrary packets body and size and can be used in order to transfer files encapsulated under supported protocols.
+It is also known as packet crafting technique.
+DOS SYN attack using hping3 command:<br>
+Open your kali Linux</p>
+<br>
+<p>Type the command: <code>hping3 -i u1 -S -p 80 192.168.243.131(ip address of target machine)</code></p>
+<p class="text-muted">where :</p>
+<p><b>i</b> — interval wait<br>
+<b>u1</b> - 1 microsecond<br>
+<b>-S</b> — Syn packet<br>
+<b>-p</b> — port number<br>
+<br>
+<p>Once you have typed that, you will get the following result: </p>
+<div class="img-place">
+    <img src="img/dos.png" alt="DDOS">
+</div>
+<br>
+<p>Now if you want to know/check if this attack works, you can fire up wireshark and see that the attacking machine is sending syn packet continuously to the target machine.
+Similarly, we can use the same command with another option( — flood)
+Instead of -i we will use –flood which will send the packet as fast as possible & doesn’t show the replies</p>
+<br>
+<span class="post-date"><b>Command:</b> <code>hping3 -S –p 135 — flood 192.168.243.131</code></span>
+
+<br>
+<div class="img-place">
+  <img src="img/wireshark.png" alt="Wireshark">
+<div>
+
+<p>Once you hit enter and continue, open up wireshark again you will see that the attacking machine is sending a syn packet and the target machine is responding with syn ack but instead of sending syn packet my machine is again sending the syn packet.<br>
+Now let me show you how to spoof your IP address and send the syn packet to the target machine for performing SYN DOS attack</p>
+
+<span class="post-date"><b>Command:</b><code> hping3 -S –p 135 — flood — rand-source 192.168.243.131</code></span>
+  <br>
+<p>This command will make you anonymous and the target will never get to know that the packet is coming from which IP.</p>
+<br>
+<div class="img-place">
+    <img src="img/check-result.png" alt="check result">
+</div>
+<br>
+  <p>Once you hit enter We can clearly see that the source IP is changing every time for sending the syn packet to the target machine. By this, the target will never get to know from which actual IP the packet is coming thus making the attacker anonymous over the internet. Another way of spoofing your IP is my using Anonsurf in parrot or in kali linux</p>
+  <br>
+  <div class="img-place">
+    <img src="img/DDOS-attack.jpg" alt="ddos-attack">
+  </div>
+  <br>
+  <br>
+  <p>I hope you have learnt how to DOs an ip address in kali linux, stay tuned for more tutorials and if this tutorial wasnt understood feel free to contact me.</p>
+
+ 	<br>
+  <div class="col-12 text-center py-3 wow fadeInUp">
+            <a href="second-blogbar.html" class="btn btn-theme">Go back</a>
+          </div>
+  <br>
+
+</div>
+</div>
+</div>
+</div>  <!-- Footer -->
+    <div class="vg-footer" id="contact">
+      <h1 class="text-center">TermuxHackz | Contact Me</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 py-3">
+            <div class="footer-info">
+              <p>Where to find me</p>
+              <hr class="divider">
+              <p class="fs-large fg-white">Block D, First Tower of the Underworld, Earth</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 py-3">
+            <div class="float-lg-right">
+              <p>Follow me</p>
+              <hr class="divider">
+              <ul class="list-unstyled">
+                <li><a href="https://facebook.com/AnonyminHack5" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/AnonyminHack5" target="_blank">Twitter</a></li>
+                <li><a href="https://github.com/TermuxHackz" target="_blank">Github</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 py-3">
+            <div class="float-lg-right">
+              <p>Tools</p>
+              <hr class="divider">
+              <ul class="list-unstyled">
+                <li><a href="tools/aisearch.html" target="_blank">AI Search Engine</a></li>
+                <li><a href="tools/base64decoder.html" target="_blank">Base64 Encoder/Decoder</a></li>
+                <li><a href="tools/video-to-gif.html" target="_blank">Convert Video to Gif</a></li>
+                <li><a href="tools/text-to-speech.html" target="_blank">Text to speech AI</a></li>
+            <li><a href="tools/qr-code-generator.html" target="_blank">QR Code Generator</a></li>
+            <li><a href="tools/essay-ai.html" target="_blank">Essay AI Writer</a></li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="col-12">
+            <p class="text-center mb-0 mt-4">Copyright &copy;2023. All right reserved | This site is made with <span class="ti-heart fg-theme-red"></span> by <a href="https://github.com/TermuxHackz">TermuxHackz</a></p>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End footer -->
+
+     <script src="js/jquery-3.5.1.min.js"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+
+    <script src="vendor/nice-select/js/jquery.nice-select.min.js"></script>
+
+    <script src="vendor/fancybox/js/jquery.fancybox.min.js"></script>
+
+    <script src="vendor/wow/wow.min.js"></script>
+
+    <script src="vendor/animateNumber/jquery.animateNumber.min.js"></script>
+
+    <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
+
+    <script src="js/google-maps.js"></script>
+
+    <script src="js/topbar-virtual.js"></script>
+
+  </body>
+  </html>

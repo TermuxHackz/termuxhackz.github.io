@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="AnonyminHack5">
+  <meta name="keywords" content="hack ftp sites, Hack websites, hack, AnonyminHack, How to hack website">
+  <meta name="description" content="How to hack ftp web clients site using hydra in your terminal both available in kali linux and can be installed into Termux. This tutorial is only made for educational purposes and wasnt intended to be for harm">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="True" name="HandheldFriendly"/>
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>How to hack FTP web clients site using hydra | TermuxHackz</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+<link rel="icon" type="image/ico" href="favicon_io/favicon.ico">
+
+  <link rel="stylesheet" type="text/css" href="css/themify-icons.css">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script>
+          function geeks(msg, gfg) {
+              var confirmBox = $("#container");
+
+              /* Trace message to display */
+              confirmBox.find(".message").text(msg);
+
+              /* Calling function */
+              confirmBox.find(".yes").unbind().click(function()
+              {
+              confirmBox.hide();
+              });
+              confirmBox.find(".yes").click(gfg);
+              confirmBox.show();
+
+              confirmBox.find(".no").unbind().click(function()
+              {
+              confirmBox.hide();
+              });
+              confirmBox.find(".no").click(gfg);
+              confirmBox.show();
+          }
+      </script>
+  <script>
+  window.addEventListener('contextmenu', function (e) {
+    // do something here...
+    alert("Right clicking is not allowed!!!");
+    e.preventDefault();
+  }, false);
+  </script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4632714155798915"
+     crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/owl-carousel/owl.carousel.css">
+
+  <link rel="stylesheet" type="text/css" href="css/maicons.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/nice-select/css/nice-select.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/fancybox/css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/virtual.css">
+
+  <link rel="stylesheet" type="text/css" href="css/topbar.virtual.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body class="theme-red">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
+<style>
+p {
+user-select: none;
+}
+body {
+user-select: none;
+font-family: 'Stick No Bills', sans-serif;
+}
+</style>
+<style>
+@media print {
+	html, body {
+		display: none;
+	}
+}
+</style>
+<style>
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}
+
+}
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+img {
+  max-width:100%;
+  height:auto;
+}
+</style>
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <span class="ti-arrow-up"></span>
+  </div>
+
+  <style>
+  body {
+  background-color: white;
+  }
+  </style>
+
+<noscript>
+  <div class="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999;">
+    <div class="popup-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #fff;">
+      <h2 style="color: red;">Oops!!, JavaScript disabled in your browser!</h2>
+      <p style="color: black;">This site uses Javascript, Please enable JavaScript from your browser settings to use this website.</p>
+    </div>
+  </div>
+</noscript>
+  <body oncontextmenu="return false;">
+
+  <!-- Setting button -->
+  <div class="config">
+    <div class="template-config">
+      <!-- Settings -->
+      <div class="d-block">
+        <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><span class="ti-settings"></span></button>
+      </div>
+      <!-- Help -->
+      <div class="d-block">
+        <a href="mailto:AnonyminHack5@protonmail.com" class="btn btn-fab btn-sm" title="Help" data-toggle="tooltip" data-placement="left"><span class="ti-help"></span></a>
+      </div>
+    </div>
+    <div class="set-menu">
+      <p>Select Color</p>
+      <div class="color-bar" data-toggle="selected">
+        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>
+        <span class="color-item bg-theme-blue" data-class="theme-blue"></span>
+        <span class="color-item bg-theme-green" data-class="theme-green"></span>
+        <span class="color-item bg-theme-orange" data-class="theme-orange"></span>
+        <span class="color-item bg-theme-purple" data-class="theme-purple"></span>
+      </div>
+    </div>
+  </div>
+  <style>
+        .mode {
+            float:right;
+        }
+        .change {
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 8px;
+        }
+        .dark{
+            background-color: #222;
+            color: #e6e6e6;
+        }
+    </style>
+    <br/>
+
+  <div class="vg-page page-home" id="home" style="float: left; height: 490px; background-image: url(img/bg_image_1.jpg)">
+    <!-- Navbar -->
+  <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
+      <div class="container">
+        <a href="" class="navbar-brand">TermuxHackz Society</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
+          <span class="ti-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="index.html" class="nav-link" data-animate="scrolling">Home</a>
+            </li>
+             <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+          <ul class="nav ml-auto">
+            <li class="nav-item">
+              <button class="btn btn-fab btn-theme no-shadow">En</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- End Navbar -->
+   <!-- Caption header -->
+    <div class="caption-header text-center wow zoomInDown">
+      <h5 class="fw-normal">Welcome</h5>
+      <h1 class="fw-light mb-4">I'm <b class="fg-theme">AnonyminHack5 </b> Tech.</h1>
+      <div class="badge">Web Designer & Programmer</div>
+    </div> <!-- End Caption header -->
+    <div class="floating-button"><span class="ti-mouse"></span></div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  	<div class="mode">
+        	<b>Dark mode:</b>
+        <span class="change">OFF</span>
+    	</div>
+
+    	<script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
+    <br/>
+    <br>
+    <br>
+
+<div class="col-lg-6 offset-lg-1 wow fadeInRight">
+  		<h1 class="fw-light"><b>How to hack FTP web clients sites using hydra</b></h1>
+   <p class="text-muted"><b>This Section</b> of this site will teach you how to bruteforce and hack ftp web clients sites using a password cracking tool called hydra.</p>
+  <br>
+  <h4><b>What is FTP?</b></h4>
+  	<p>FTP stands for File Transfer Protocol. As you can see by the name, you can manage files through the FTP. The FTP port, is very-well known, but is rarely open on big websites. The FTP port is Port 21. There are multiple ways to connect to an FTP server/port, especially thanks to technology, such as FileZilla.
+There are of course other ways, which are the manual ways. Which is connecting to the FTP through a DOS Command line. You can do this from Ubuntu, Backtrack, (All linux), and also Windows. I’ve never tried it on Mac, but I’m sure it’s possible.
+When you have access to the FTP, you’re the king of the website. Mostly because you can manage all of the files and directories on the site. So you can upload and delete. If you upload your PHP or ASP shell, you could root the server, and possibly hack other sites.</p>
+<br>
+  <h4>How do i know if the FTP port is open?</h4>
+  <p>Well, you don’t know until you scan. The most popular port scanner would be Nmap. You can download Nmap at http://www.nmap.org/. Once you have installed nmap on windows, you can also install nmap on termux/linux.</p>
+
+  <br>
+  <h5 style="color: green"><b>Install Nmap</b></h5>
+<span class="post-date"><b>For Termux: </b><code> pkg install Nmap </code></span>
+<br>
+<span class="post-date"><b>For Linux: </b><code> sudo apt install nmap </code></span>
+<br>
+<br/>
+<p>Once done, you can now scan the FTP port using nmap, also using netdiscover, zenmap (GUI), then use this command to scan the IP and Port, make sure its open. <code>nmap -sV 10.10.0.50 -p 21</code>. replace <b>10.10.0.50</b>With the IP of the FTP Site. To get the IP of the site, use the ping command to do that eg: <code>ping ftpsite.com</code> and that should ping the site, and you will see the IP address attached.</p>
+<br>
+
+<h4>How do i hack a Site through FTP?</h4>
+<p>There are a couple ways to do this, my favorites are looking for exploits in the FTP client and version, and Bruteforcing/Dictionary attack. The first method is very simple, just read the above section to figure out how to do it.
+Bruteforcing is when you attack a target by using somtimes MILLIONS of passwords. Bruteforce uses random combinations, whereas a Dictionary Attack uses words. The Dictionary Attack goes MUCH faster, but will not always work. I only bruteforce when I have no other choice.
+The second way, is still pretty easy, but requires a little bit more brain :P . If you want to do it more “Advanced-ly” then download “Hydra”. Hydra is a program that will perform a dictionary attack on any open port on your target site, or IP.
+The easy way to do it, is by downloading “Brutus”. It does the same thing, but it’s easier to navigate and use.</p>
+
+<br>
+<h4>What is Hydra?</h4>
+<p>Hydra is a parallelized network login cracker built in various operating systems like Kali Linux, Parrot and other major penetration testing environments. ... Hydra is commonly used by penetration testers together with a set of programmes like crunch, cupp etc, which are used to generate wordlists.</p>
+
+  <br>
+  <h4>What is Hydra FTP?</h4>
+  <p>Hydra is a popular password cracking tool that can be used to brute force many services to find out the login password from a given wordlist. It is included in kali linux and is in the top 10 list. ... It mentions the username/password combination that worked for the ftp server</p>
+
+  <br>
+<!---->
+    <p>Now to hack the site through FTP, Open a new session or a terminal, then type:
+      <span class="post-date"><b>For Termux: </b>visit this <a href="https://github.com/vanhauser-thc/thc-hydra.git" target="_blank">link</a> to install hydra</span>
+      <br>
+      <span class="post-date"><b>For Linux: </b><code>sudo apt install hydra</code></span>
+      <br>
+<p>Once done, input this command <br><code>hydra -L /usr/share/wordlists/metasploit/unix_users.txt -P /usr/share/wordlists/metasploit/unix_passwords.txt ftp://192.168.0.1 -s 21</code> <br>i will explain what all those commands mean</p>
+<br>
+<p>What these commands do: </p>
+<span class="post-date"><b>-L</b>: Path of your usernames.txt file to bruteforce FTP Site. eg (/usr/share/wordlists/metasploit/unix_users.txt)</span>
+<br>
+<span class="post-date"><b>unix_users.txt</b>: This is the name of your usernames.txt file where all possible usernames are stored in.</span><br>
+<span class="post-date"><b>-P</b>: This is an argument for path of your passwords.txt file. eg (/usr/share/wordlists/metasploit/unix_passwords.txt)</span><br>
+<span class="post-date"><b>unix_passwords.txt</b>: This is the name of yout passwords.txt file where all possible passwords are stored in.</span><br>
+<span class="post-date"><b>ftp://198.168.0.1</b>: This is the the ftp and Ip of the FTP sites that we are bruteforcing.</span><br>
+<span class="post-date"><b>-s</b>: This is to specify the port to use </span><br>
+<span class="post=date"><b>21</b>: This is the default FTP port specified with the -s option</span><br>
+
+<br>
+<br>
+<div class="img-place">
+  <img src="img/hydra.PNG" alt="hydra">
+</div>
+
+<br>
+<br>
+    <p>Now this attack will take sometime depending on your wordlist and Depending on your CPU processor/hardware. If you dont have a password list or usernames list. I will offer you a link where you will be able to get them and download them to use for the bruteforce.</p>
+    <p>Download Password list <a href="https://github.com/danielmiessler/SecLists/raw/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt" target="_blank">here</a> and also download usernames.txt files from <a href="https://github.com/jeanphorn/wordlist/blob/master/usernames.txt" target="_blank" download>here</a> These files will likely have the password and username of the FTP Site you are trying to bruteforce.</p>
+
+    <br>
+    <br>
+    <p>I hope the teaching of bruteforcing FTP Sites was cleared and well understood, a video regarding this will be FTP Site hacking will be made and much more explained.</p>
+
+    <br>
+    <br/>
+
+        <div class="col-12 text-center py-3 wow fadeInUp">
+          <a href="second-blogbar.html" class="btn btn-theme">Go back</a>
+        </div>
+<br>
+
+</div>
+  <!-- Footer -->
+  <div class="vg-footer" id="contact">
+    <h1 class="text-center">TermuxHackz | Contact me</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 py-3">
+          <div class="footer-info">
+            <p>Where to find me</p>
+            <hr class="divider">
+            <p class="fs-large fg-white">Block D, First Tower of the Underworld, Earth</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 py-3">
+          <div class="float-lg-right">
+            <p>Follow me</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li><a href="https://facebook.com/AnonyminHack5" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com/AnonyminHack5" target="_blank">Twitter</a></li>
+              <li><a href="https://github.com/TermuxHackz" target="_blank">Github</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 py-3">
+          <div class="float-lg-right">
+            <p>Tools</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li><a href="tools/aisearch.html" target="_blank">AI Search Engine</a></li>
+              <li><a href="tools/base64decoder.html" target="_blank">Base64 Encoder/Decoder</a></li>
+              <li><a href="tools/video-to-gif.html" target="_blank">Convert Video to Gif</a></li>
+              <li><a href="tools/text-to-speech.html" target="_blank">Text to speech AI</a></li>
+            <li><a href="tools/qr-code-generator.html" target="_blank">QR Code Generator</a></li>
+            <li><a href="tools/essay-ai.html" target="_blank">Essay AI Writer</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="col-12">
+          <p class="text-center mb-0 mt-4">Copyright &copy;2023. All right reserved | This site is made with <span class="ti-heart fg-theme-red"></span> by <a href="https://github.com/TermuxHackz">TermuxHackz</a></p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End footer -->
+
+
+<script src="js/jquery-3.5.1.min.js"></script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+
+<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+
+<script src="vendor/nice-select/js/jquery.nice-select.min.js"></script>
+
+<script src="vendor/fancybox/js/jquery.fancybox.min.js"></script>
+
+<script src="vendor/wow/wow.min.js"></script>
+
+<script src="vendor/animateNumber/jquery.animateNumber.min.js"></script>
+
+<script src="/vendor/waypoints/jquery.waypoints.min.js"></script>
+
+<script src="js/google-maps.js"></script>
+
+<script src="js/topbar-virtual.js"></script>
+
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script> -->
+
+</body>
+</html>

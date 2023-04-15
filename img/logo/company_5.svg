@@ -1,0 +1,41 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffc724;
+      }
+
+      .cls-2 {
+        fill: #ee3e30;
+      }
+
+      .cls-3 {
+        fill: #931a3d;
+      }
+
+      .cls-4 {
+        fill: #f58b1f;
+      }
+
+      .cls-5 {
+        fill: #2d2d2d;
+      }
+    </style>
+  </defs>
+  <title>Artboard 5</title>
+  <g id="_Group_" data-name="&lt;Group&gt;">
+    <g id="_Group_2" data-name="&lt;Group&gt;">
+      <g id="_Group_3" data-name="&lt;Group&gt;">
+        <path id="_Path_" data-name="&lt;Path&gt;" class="cls-1" d="M100.85,347H23.23c0,37.71,34.75,68.28,77.62,68.28H411.16l-75-68.28Z"/>
+        <g id="_Group_4" data-name="&lt;Group&gt;">
+          <path id="_Path_2" data-name="&lt;Path&gt;" class="cls-2" d="M411.16,96.72H100.85V165H488.77C488.77,127.29,454,96.72,411.16,96.72Z"/>
+          <path id="_Path_3" data-name="&lt;Path&gt;" class="cls-3" d="M411.16,165V415.28h0c42.87,0,77.62-30.57,77.62-68.28V165Z"/>
+        </g>
+      </g>
+      <path id="_Path_4" data-name="&lt;Path&gt;" class="cls-4" d="M23.23,347h77.62V96.72h0C58,96.72,23.23,127.29,23.23,165Z"/>
+      <ellipse id="_Path_5" data-name="&lt;Path&gt;" class="cls-5" cx="182.51" cy="252.57" rx="25.01" ry="22"/>
+      <ellipse id="_Path_6" data-name="&lt;Path&gt;" class="cls-5" cx="266.59" cy="252.57" rx="25.01" ry="22"/>
+      <ellipse id="_Path_7" data-name="&lt;Path&gt;" class="cls-5" cx="350.68" cy="252.57" rx="25.01" ry="22"/>
+    </g>
+  </g>
+</svg>

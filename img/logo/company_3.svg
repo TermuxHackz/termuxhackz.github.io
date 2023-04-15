@@ -1,0 +1,41 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #931a3d;
+      }
+
+      .cls-2 {
+        fill: #ee3e30;
+      }
+
+      .cls-3 {
+        fill: #f58b1f;
+      }
+
+      .cls-4 {
+        fill: #ffc724;
+      }
+    </style>
+  </defs>
+  <title>Artboard 3</title>
+  <g id="_Group_" data-name="&lt;Group&gt;">
+    <g id="_Group_2" data-name="&lt;Group&gt;">
+      <g id="_Group_3" data-name="&lt;Group&gt;">
+        <polygon id="_Path_" data-name="&lt;Path&gt;" class="cls-1" points="118.22 156.66 118.44 156.54 49.45 116.7 49.45 275.77 118.22 236.06 118.22 156.66"/>
+        <polygon id="_Path_2" data-name="&lt;Path&gt;" class="cls-2" points="49.45 116.7 118.44 156.54 186.99 116.95 186.99 37.55 49.45 116.7"/>
+        <polygon id="_Path_3" data-name="&lt;Path&gt;" class="cls-1" points="462.55 116.7 324.54 37.55 324.54 116.95 393.31 156.66 393.31 156.67 462.55 116.7"/>
+        <polygon id="_Path_4" data-name="&lt;Path&gt;" class="cls-2" points="255.76 394.89 186.99 355.18 118.22 394.89 256 474.45 256 394.75 255.76 394.89"/>
+        <polygon id="_Path_5" data-name="&lt;Path&gt;" class="cls-1" points="393.31 394.89 324.54 355.18 324.53 355.18 256 394.75 256 474.45 393.31 394.89"/>
+        <polygon id="_Path_6" data-name="&lt;Path&gt;" class="cls-2" points="393.31 156.67 393.31 236.06 462.08 275.77 462.55 116.7 393.31 156.67"/>
+        <line id="_Path_7" data-name="&lt;Path&gt;" class="cls-1" x1="324.54" y1="275.78" x2="324.75" y2="275.65"/>
+      </g>
+      <polygon id="_Path_8" data-name="&lt;Path&gt;" class="cls-3" points="255.96 373.9 314.2 340.27 314.2 272.79 255.96 239.16 255.96 373.9"/>
+      <polygon id="_Path_9" data-name="&lt;Path&gt;" class="cls-4" points="206.36 267.57 197.32 272.8 197.32 340.27 197.31 340.27 255.76 374.02 255.76 239.06 206.36 267.57"/>
+      <polygon id="_Path_10" data-name="&lt;Path&gt;" class="cls-4" points="255.76 171.57 197.32 137.82 139.06 171.46 255.76 238.85 255.76 171.57"/>
+      <polygon id="_Path_11" data-name="&lt;Path&gt;" class="cls-3" points="138.87 239.04 197.31 272.79 255.76 239.04 138.87 171.57 138.87 239.04"/>
+      <polygon id="_Path_12" data-name="&lt;Path&gt;" class="cls-4" points="255.96 238.93 255.94 238.95 255.76 239.05 255.76 239.05 255.77 239.05 255.96 239.16 314.2 272.79 314.21 272.8 314.21 272.79 314.4 272.69 372.65 239.05 372.65 239.04 372.65 171.57 372.65 171.57 255.96 238.93"/>
+      <polygon id="_Path_13" data-name="&lt;Path&gt;" class="cls-3" points="255.96 238.93 372.65 171.57 314.21 137.82 255.96 171.45 255.96 238.93"/>
+    </g>
+  </g>
+</svg>

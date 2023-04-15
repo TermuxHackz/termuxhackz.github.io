@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="AnonyminHack5">
+  <meta name="keywords" content="Osint, X-osint, AnonyminHack5, Getting information, Email address, X-osint github">
+  <meta name="description" content="This tutorial will teach you how to install X-osint in your terminal which can be used for OSINT which means getting information about specific targets, and more.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="True" name="HandheldFriendly"/>
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>X-osint | TermuxHackz</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+<link rel="icon" type="image/ico" href="favicon_io/favicon.ico">
+
+<link rel="stylesheet" href="css/style-download.css">
+
+  <link rel="stylesheet" type="text/css" href="css/themify-icons.css">
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+<meta name="screen-capture" content="deny">
+<script>
+document.onkeydown = function(e) {
+if (e.keyCode == 44 && (e.ctrlKey || e.metaKey)) {
+e.preventDefault();
+}
+};
+</script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+
+<div id="container">
+    <div class="message">
+  <script>
+  window.addEventListener('contextmenu', function (e) {
+    // do something here...
+    alert("You cannot right click here");
+    e.preventDefault();
+  }, false);
+  </script>
+</div>
+</div>
+  <link rel="stylesheet" type="text/css" href="vendor/owl-carousel/owl.carousel.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/nice-select/css/nice-select.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/fancybox/css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/maicons.css">
+
+  <link rel="stylesheet" type="text/css" href="css/virtual.css">
+
+  <link rel="stylesheet" type="text/css" href="css/topbar.virtual.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script>
+  document.onkeypress = function (event) {
+  event = (event || window.event);
+  if (event.keyCode == 123) {
+    alert("F12 is also disabled");
+  return false;
+  }
+  }
+  document.onmousedown = function (event) {
+  event = (event || window.event);
+  if (event.keyCode == 123) {
+  return false;
+  }
+  }
+  document.onkeydown = function (event) {
+  event = (event || window.event);
+  if (event.keyCode == 123) {
+  return false;
+  }
+  }
+  </script>
+
+</head>
+<body class="theme-red">
+
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <span class="ti-arrow-up"></span>
+  </div>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
+
+<style>
+p {
+user-select: none;
+}
+body {
+user-select: none;
+font-family: 'Stick No Bills', sans-serif;
+}
+</style>
+
+<noscript>
+  <div class="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999;">
+    <div class="popup-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #fff;">
+      <h2 style="color: red;">Oops!!, JavaScript disabled in your browser!</h2>
+      <p style="color: black;">This site uses Javascript, Please enable JavaScript from your browser settings to use this website.</p>
+    </div>
+  </div>
+</noscript>
+  <body oncontextmenu="return false;">
+
+  <!-- Setting button -->
+  <div class="config">
+    <div class="template-config">
+      <!-- Settings -->
+      <div class="d-block">
+        <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><span class="ti-settings"></span></button>
+      </div>
+      <!-- Help -->
+      <div class="d-block">
+        <a href="mailto:AnonyminHack5@protonmail.com" class="btn btn-fab btn-sm" title="Help" data-toggle="tooltip" data-placement="left"><span class="ti-help"></span></a>
+      </div>
+    </div>
+    <div class="set-menu">
+      <p>Select Color</p>
+      <div class="color-bar" data-toggle="selected">
+        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>
+        <span class="color-item bg-theme-blue" data-class="theme-blue"></span>
+        <span class="color-item bg-theme-green" data-class="theme-green"></span>
+        <span class="color-item bg-theme-orange" data-class="theme-orange"></span>
+        <span class="color-item bg-theme-purple" data-class="theme-purple"></span>
+      </div>
+    </div>
+  </div>
+  <style>
+        .mode {
+            float:right;
+        }
+        .change {
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 8px;
+        }
+        .dark{
+            background-color: #222;
+            color: #e6e6e6;
+        }
+    </style>
+    <br/>
+
+  <div class="vg-page page-home" id="home" style="float: left; height: 490px; background-image: url(img/bg_image_1.jpg)">
+    <!-- Navbar -->
+  <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
+      <div class="container">
+        <a href="" class="navbar-brand">TermuxHackz Society</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
+          <span class="ti-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="index.html" class="nav-link" data-animate="scrolling">Home</a>
+            </li>
+             <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+          <ul class="nav ml-auto">
+            <li class="nav-item">
+              <button class="btn btn-fab btn-theme no-shadow">En</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- End Navbar -->
+   <!-- Caption header -->
+    <div class="caption-header text-center wow zoomInDown">
+      <h5 class="fw-normal">Welcome</h5>
+      <h1 class="fw-light mb-4">I'm <b class="fg-theme">AnonyminHack5 </b> Tech.</h1>
+      <div class="badge">Web Designer & Programmer</div>
+    </div> <!-- End Caption header -->
+    <div class="floating-button"><span class="ti-mouse"></span></div>
+  </div>
+
+  <br>
+  <br>
+  	<div class="mode">
+        	<b>Dark mode:</b>
+        <span class="change">OFF</span>
+    	</div>
+
+    	<script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
+    <br/>
+    <br>
+    <br>
+    <br>
+  	<div class="col-lg-6 offset-lg-1 wow fadeInRight">
+	<br/>
+  		<h1 class="fw-light"><b>How to install X-osint into your terminal which can be used for information gathering</b></h1>
+   <p class="text-muted">This Section</b> of this site will teach you how to install X-osint and what X-osint is</p>
+  <br>
+  <h4><b>What is X-osint?</b></h4>
+  	<p>X-osint is an Open source intelligent framework ie an osint tool which gathers valid information about a phone number, user's email address, perform VIN Osint, and reverse, perform subdomain enumeration, able to find email from a name, and so much more. Best osint tool for Termux and linux </p>
+
+<h4><b>Features about X-osint</b></h4>
+<style>
+.lists{
+font-family: 'Roboto Slab', serif;
+font-size: 1.2rem;
+margin: 0;
+padding: 1rem;
+display: grid;
+place-items: center;
+min-height: 100vh;
+}
+ol {
+padding: 0;
+margin: 0;
+max-width: 700px;
+position: relative;
+}
+
+ol::before {
+content: '';
+width: 0.5rem;
+height: 100%;
+position: absolute;
+top: 0;
+left: 8%;
+z-index: -1;
+}
+
+.li {
+padding: 0.5rem 1.5rem 1rem;
+border-radius: 1.5rem;
+background: peachpuff;
+}
+.li + li {
+margin-top: 1rem;
+}
+::marker {
+font-weight: 600;
+color: tomato;
+font-size: 1.8rem;
+}
+</style>
+<div class="lists">
+	<ol>
+			<li> IP Address information gathering</li>
+			<li>Email Address information gathering</li>
+			<li>Phone number information gathering</li>
+			<li>Host finding</li>
+			<li>Ports finding</li>
+			<li>Subdomain Enumeration</li>
+			<li>CVE Exploits Finder</li>
+			<li>Email Finder</li>
+			<li>Exploit Open Source Vulnerability Database</li>
+			<li>DNS Loookup</li>
+			<li>DNS Reverse</li>
+			<li>Vehicle Identification Number Information</li>
+			<li>Protonmail OSINT</li>
+			<li>Getting information about License plates</li>
+			<li>Hunting Usernames via Socials</li>
+			<li>And More......</li>
+	</ol>
+</div>
+<h4><b>How to Install X-osint</b></h4>
+ 	<p class="text-muted">Installation of X-osint isn't such a complex process follow the steps below, Copying is not allowed, you have to type it that way you would learn the commands your typing not just copying and paste.</p>
+ 	<br>
+ 	<div class="col-12 text-center py-3 wow fadeInUp">
+          <a href="#video" class="btn btn-theme">Installation of X-osint</a>
+        </div>
+        <br>
+	
+<br/>
+ 	<h5 style="color: green"><b>Update and Upgrade your repo</b></h5>
+ 	<span class="post-date"><b>For Termux: </b><code> pkg update -y && pkg upgrade -y </code></span>
+ 	<br>
+ 	<span class="post-date"><b>For Linux: </b><code> sudo apt update -y && sudo apt upgrade -y </code></span>
+ 	<br>
+ 	<br/>
+ 	<h5 style="color: green"><b>Install git into your terminal</b></h5>
+ 	<span class="post-date"><b>For Termux: </b><code> pkg install git -y </code></span>
+ 	<br>
+ 	<span class="post-date"><b>For Linux: </b><code> sudo apt install git -y </code></span>
+
+ 	<br>
+ 	<br/>
+ 	<h5 style="color: green"><b>Clone my repository</b></h5>
+ 	<span class="post-date"><b>For Both: </b><code> git clone https://github.com/TermuxHackz/X-osint</code></span>
+
+ 	<br>
+ 	<br/>
+ 	<h5 style="color: green"><b>Go into directory and grant permissions to all files</b></h5>
+ 	<span class="post-date"><b>For Both: </b><code> cd X-osint && chmod +x *</code></span>
+
+ 	<br/>
+ 	<br>
+	<h5 style="color: green"><b>Start the X-osint installer</b></h5>
+ 	<span class="post-date"><b>For Both: </b><code>bash setup.sh </code></span>
+
+ 	<br/>
+ 	<br>
+ 	<div class="img-place">
+ 		<img src="img/x-osint.png" alt="X-osint Menu">
+ 	</div>
+ 	<br/>
+ 	<br>
+ 	<p>I hope the installation of X-osint has been cleared up and easy to use, if you face errors during installation be sure to report them to me and i will help you fix them. Also, if  you need to read more about X-osint, kindly visit my github <a href="https://github.com/TermuxHackz/X-osint" target="_blank">here</a>.</p>
+ 	<br/>
+
+ 	<h5><b>This Video Shows the installation of X-osint in  kali linux 2023.1</b></h5>
+ 	 <video width="300" height="240" id="video" target="_blank" controls>
+  		<source src="videos/X-osint.mp4" type="video/mp4">
+	</video>
+<center>
+          <a href="videos/X-osint.mp4" class="btn btn-theme" target="_blank" download>Download Video</a>
+        </center>
+        </div>
+</div>
+
+<div class="col-12 text-center py-3 wow fadeInUp">
+          <a href="third-blogbar.html" class="btn btn-theme">Go back</a>
+        </div>
+<br>
+<style>
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 200px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+</style>
+
+          <!-- Footer -->
+  <div class="vg-footer" id="contact">
+    <h1 class="text-center">TermuxHackz | Contact Me</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 py-3">
+          <div class="footer-info">
+            <p>Where to find me</p>
+            <hr class="divider">
+            <p class="fs-large fg-white">Block D, First Tower of the Underworld, Earth</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 py-3">
+          <div class="float-lg-right">
+            <p>Follow me</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li><a href="https://facebook.com/AnonyminHack5" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com/AnonyminHack5" target="_blank">Twitter</a></li>
+              <li><a href="https://github.com/TermuxHackz" target="_blank">Github</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 py-3">
+          <div class="float-lg-right">
+            <p>Tools</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li><a href="tools/aisearch.html" target="_blank">AI Search Engine</a></li>
+              <li><a href="tools/base64decoder.html" target="_blank">Base64 Encoder/Decoder</a></li>
+              <li><a href="tools/video-to-gif.html" target="_blank">Convert Video to Gif</a></li>
+              <li><a href="tools/text-to-speech.html" target="_blank">Text to speech AI</a></li>
+            <li><a href="tools/qr-code-generator.html" target="_blank">QR Code Generator</a></li>
+            <li><a href="tools/essay-ai.html" target="_blank">Essay AI Writer</a></li>
+            </ul>
+          </div>
+        </div>
+  
+<center>
+	<button class="open-button" onclick="openForm()">Open Form</button>
+<br><br>
+<div class="form-popup" id="myForm">
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script> 
+
+  <form action="mailto:AnonyminHack5@protonmail.com" method="POST" enctype="text/plain" name="EmailForm" class="form-container">
+    <h1> Message me</h1>
+<label for="name">Name:</label><br>
+<input type="text" id="name" name="name"><br>
+
+
+<label for="ContactCommentt">Message:</label><br>
+<textarea id=”ContactCommentt” rows="6" cols="20">
+</textarea><br>
+
+<input type="submit" value="Send">
+</form>
+ </body>
+	<button type="button" class="btn cancel" onclick="closeForm()">x</button>
+</div>
+</center>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+        <div class="col-12">
+          <p class="text-center mb-0 mt-4">Copyright &copy;2023. All right reserved | This site is made with <span class="ti-heart fg-theme-red"></span> by <a href="https://github.com/TermuxHackz">TermuxHackz</a></p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End footer -->
+
+   <script src="js/jquery-3.5.1.min.js"></script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+
+  <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+
+  <script src="vendor/nice-select/js/jquery.nice-select.min.js"></script>
+
+  <script src="vendor/fancybox/js/jquery.fancybox.min.js"></script>
+
+  <script src="vendor/wow/wow.min.js"></script>
+
+  <script src="vendor/animateNumber/jquery.animateNumber.min.js"></script>
+
+  <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
+
+  <script src="js/google-maps.js"></script>
+
+  <script src="js/topbar-virtual.js"></script>
+
+</body>
+</html>
+
+	
+	
+	

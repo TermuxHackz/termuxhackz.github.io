@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+    <head>
+    	<meta name="google" content="notranslate" />
+        <meta charset="UTF-8">
+        <meta name="description" content="Transform Video to GIF">
+        <meta name="keywords" content="Canvas,Video,GIF,Encode">
+       	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />  
+	    <meta http-equiv="Content-Language" content="en" />
+	    <meta name="msapplication-TileColor" content="#ffffff" />
+	    <meta name="theme-color" content="#ffffff" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="mobile-web-app-capable" content="yes" />
+	    <meta name="HandheldFriendly" content="True" />
+	    <meta name="MobileOptimized" content="320" />  
+	    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <title>ᴠɪᴅᴇᴏ ᴛᴏ GIF ᴍᴀᴋᴇʀ</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+<link rel="manifest" href="../favicon_io/site.webmanifest">
+<link rel="icon" type="image/ico" href="../favicon_io/favicon.ico">
+
+  <link rel="stylesheet" type="text/css" href="../css/themify-icons.css">
+  
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+<!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="../css/virtual.css">
+
+  <link rel="stylesheet" type="text/css" href="../css/topbar.virtual.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link ref="stylesheet" type="text/css" href="../css/checkinternet.css">
+
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="demo.css">
+
+<script>
+  window.addEventListener("keydown",function(e) {
+    if(e.keyCode === 123) {
+      e.preventDefault();
+      alert("Haha, F12 is also disabled!..");
+    }
+  });
+  </script>
+
+  <script>
+  document.onkeypress = function (event) {
+  event = (event || window.event);
+  if (event.keyCode == 123) {
+    alert("F12 is also disabled");
+  return false;
+  }
+  }
+  document.onmousedown = function (event) {
+  event = (event || window.event);
+  if (event.keyCode == 123) {
+  return false;
+  }
+  }
+  document.onkeydown = function (event) {
+  event = (event || window.event);
+  if (event.keyCode == 123) {
+  return false;
+  }
+  }
+  </script>
+
+
+</head>
+<div id="js-alert"></div>
+<script src="js/noscript.js"></script>
+<body class="theme-red">
+
+   <!--Check for internet connection and show popup -->
+   <div class="wrapper">
+    <div class="toast">
+      <div class="content">
+        <div class="icon"><i class="uil uil-wifi"></i></div>
+        <div class="details">
+          <span>You're online now</span>
+          <p>Hurray! Internet is connected.</p>
+        </div>
+      </div>
+      <div class="close-icon"><i class="uil uil-times"></i></div>
+    </div>
+  </div>
+
+  <script src="../js/checkinternet.js"></script>
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <span class="ti-arrow-up"></span>
+  </div>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
+
+<style>
+p {
+user-select: none;
+}
+body {
+user-select: none;
+font-family: 'Stick No Bills', sans-serif;
+}
+</style>
+
+  <body oncontextmenu="return false;">
+    <noscript>
+      <div class="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999;">
+        <div class="popup-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #fff;">
+          <h2 style="color: red;">Oops!!, JavaScript disabled in your browser!</h2>
+          <p style="color: black;">This site uses Javascript, Please enable JavaScript from your browser settings to use this website.</p>
+        </div>
+      </div>
+    </noscript>
+
+    <!--END of internet chcking-->
+
+  <!-- Setting button -->
+  <div class="config">
+    <div class="template-config">
+      <!-- Settings -->
+      <div class="d-block">
+        <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><span class="ti-settings"></span></button>
+      </div>
+      <!-- Help -->
+      <div class="d-block">
+        <a href="mailto:AnonyminHack5@protonmail.com" class="btn btn-fab btn-sm" title="Help" data-toggle="tooltip" data-placement="left"><span class="ti-help"></span></a>
+      </div>
+    </div>
+    <div class="set-menu">
+      <p>Select Color</p>
+      <div class="color-bar" data-toggle="selected">
+        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>
+        <span class="color-item bg-theme-blue" data-class="theme-blue"></span>
+        <span class="color-item bg-theme-green" data-class="theme-green"></span>
+        <span class="color-item bg-theme-orange" data-class="theme-orange"></span>
+        <span class="color-item bg-theme-purple" data-class="theme-purple"></span>
+      </div>
+    </div>
+  </div>
+  <style>
+        .mode {
+            float:right;
+        }
+        .change {
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 8px;
+        }
+        .dark{
+            background-color: #222;
+            color: #e6e6e6;
+        }
+    </style>
+    <br/>
+
+  <div class="vg-page page-home" id="home" style="float: left; height: 490px; background-image: url(../img/bg_image_1.jpg)">
+    <!-- Navbar -->
+  <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
+      <div class="container">
+        <a href="" class="navbar-brand">TermuxHackz Society</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
+          <span class="ti-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="../index.html" class="nav-link" data-animate="scrolling">Home</a>
+            </li>
+             <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+          <ul class="nav ml-auto">
+            <li class="nav-item">
+              <button class="btn btn-fab btn-theme no-shadow">En</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- End Navbar -->
+   <!-- Caption header -->
+    <div class="caption-header text-center wow zoomInDown">
+      <h5 class="fw-normal">Welcome</h5>
+      <h1 class="fw-light mb-4">I'm <b class="fg-theme">AnonyminHack5 </b> Tech.</h1>
+      <div class="badge">Web Designer & Programmer</div>
+    </div> <!-- End Caption header -->
+    <div class="floating-button"><span class="ti-mouse"></span></div>
+  </div>
+
+  <br>
+  <br>
+  	<div class="mode">
+        	<b>Dark mode:</b>
+        <span class="change">OFF</span>
+    	</div>
+<br>
+<br>
+<br>
+    	<script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
+    <br/>
+    <br>
+    <br>
+    <div class="ScriptTop">
+        <div class="rt-container">
+            <div class="col-rt-4" id="float-right">
+    
+            </div>
+            <div class="col-rt-2">
+                <ul>
+                    <li><a href="../index.html" title="Back to tutorial page">Back to Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>📽 Video Clip to GIF Conversion</h2>
+		<p>
+      <button id='inputVideoClipFileBtn' type='button' class='btn btn-outline-dark'>📤 <small>Upload Video!</small>
+      <input id='inputVideoClipFile' type='file' multiple='false' accept='.mp4,.webm,.avi,.mpeg,.flv,.mov,.3gp' />
+    </button> ⇽ 🏁 <b>START!</b></p>
+		<hr>
+		<div id='inputVideoClipFileInfo' class='table-responsive'>
+			<table class="table table-bordered">
+				<thead>
+					<tr align="left">
+						<th colspan='2' id='inputVideoPreview' class='imageBg'>
+							<h3><span>🎦 Uploaded Preview</span></h3>
+						</th>
+					</tr>
+				</thead>
+				<tbody id='inputVideoDetails'></tbody>
+			</table>
+			<div id='loadingBar'></div>
+		</div>
+
+    <br>
+    <div class="col-12">
+      <p id="copyrightBanner">© Copyright <span id="yearDisplay"></span> | Created by <a href="https://github.com/TermuxHackz" target="_blank">AnonyminHack5</a> ξ(🎀˶❛◡❛) | Credits to: 🎞 📽 <a href="https://github.com/incubated-geek-cc" target="_blank">geek-cc</a></p>
+  </div>
+    <br><br>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    
+    <script src="../vendor/owl-carousel/owl.carousel.min.js"></script>
+    
+    <script src="../vendor/isotope/isotope.pkgd.min.js"></script>
+    
+    <script src="../vendor/nice-select/js/jquery.nice-select.min.js"></script>
+    
+    <script src="../vendor/fancybox/js/jquery.fancybox.min.js"></script>
+    
+    <script src="../vendor/wow/wow.min.js"></script>
+    
+    <script src="../vendor/animateNumber/jquery.animateNumber.min.js"></script>
+    
+    <script src="../vendor/waypoints/jquery.waypoints.min.js"></script>
+    
+    <script src="../js/topbar-virtual.js"></script>
+
+    
+		<script type="text/javascript" src="js/LZWEncoder.js"></script>
+		<script type="text/javascript" src="js/NeuQuant.js"></script>
+		<script type="text/javascript" src="js/GIFEncoder.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<div id='hiddenCanvas' style='display:none'></div>
+    
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script> -->
+    
+    </body>
+    </html>
+    
+    
+    

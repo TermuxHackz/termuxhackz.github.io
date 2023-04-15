@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="AnonyminHack5, Termux, Hacking, Github, TermuxHackz Society, deface script, how to create a deface script">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="How to create a website defacing script automatically without having any coding knowledge at all very easy in both Termux and Linux, also in windows Operating system. Please do ensure this tutorial is not for harm and only for educational purposes. Be warned!!.">
+  <meta name="author" content="AnonyminHack5">
+  <meta content="True" name="HandheldFriendly"/>
+
+		<title>How to create a defacing script automatically</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+<link rel="icon" type="image/ico" href="favicon_io/favicon.ico">
+
+  <link rel="stylesheet" type="text/css" href="css/themify-icons.css">
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+  <link rel="stylesheet" type="text/css" href="css/maicons.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/owl-carousel/owl.carousel.css">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4632714155798915"
+     crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <script>
+          function geeks(msg, gfg) {
+              var confirmBox = $("#container");
+
+              /* Trace message to display */
+              confirmBox.find(".message").text(msg);
+
+              /* Calling function */
+              confirmBox.find(".yes").unbind().click(function()
+              {
+              confirmBox.hide();
+              });
+              confirmBox.find(".yes").click(gfg);
+              confirmBox.show();
+
+              confirmBox.find(".no").unbind().click(function()
+              {
+              confirmBox.hide();
+              });
+              confirmBox.find(".no").click(gfg);
+              confirmBox.show();
+          }
+      </script>
+<script>
+window.addEventListener('contextmenu', function (e) {
+  // do something here...
+  alert("Right Clicking is very disabled!!!!..Get that");
+  e.preventDefault();
+}, false);
+</script>
+
+  <link rel="stylesheet" type="text/css" href="vendor/nice-select/css/nice-select.css">
+
+  <link rel="stylesheet" type="text/css" href="vendor/fancybox/css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/virtual.css">
+
+  <link rel="stylesheet" type="text/css" href="css/topbar.virtual.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+</script>
+
+</head>
+
+<body class="theme-red">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
+<style>
+p {
+user-select: none;
+}
+body {
+user-select: none;
+font-family: 'Stick No Bills', sans-serif;
+}
+</style>
+
+<style>
+@media print {
+	html, body {
+		display: none;
+	}
+}
+</style>
+
+<noscript>
+  <div class="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999;">
+    <div class="popup-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #fff;">
+      <h2 style="color: red;">Oops!!, JavaScript disabled in your browser!</h2>
+      <p style="color: black;">This site uses Javascript, Please enable JavaScript from your browser settings to use this website.</p>
+    </div>
+  </div>
+</noscript>
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <span class="ti-arrow-up"></span>
+  </div>
+
+  <!-- Setting button -->
+  <div class="config">
+    <div class="template-config">
+      <!-- Settings -->
+      <div class="d-block">
+        <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><span class="ti-settings"></span></button>
+      </div>
+      <!-- Help -->
+      <div class="d-block">
+        <a href="mailto:AnonyminHack5@protonmail.com" class="btn btn-fab btn-sm" title="Help" data-toggle="tooltip" data-placement="left"><span class="ti-help"></span></a>
+      </div>
+    </div>
+    <div class="set-menu">
+      <p>Select Color</p>
+      <div class="color-bar" data-toggle="selected">
+        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>
+        <span class="color-item bg-theme-blue" data-class="theme-blue"></span>
+        <span class="color-item bg-theme-green" data-class="theme-green"></span>
+        <span class="color-item bg-theme-orange" data-class="theme-orange"></span>
+        <span class="color-item bg-theme-purple" data-class="theme-purple"></span>
+      </div>
+    </div>
+  </div>
+  <style>
+        .mode {
+            float:right;
+        }
+        .change {
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 8px;
+        }
+        .dark{
+            background-color: #222;
+            color: #e6e6e6;
+        }
+    </style>
+    <br/>
+
+  <div class="vg-page page-home" id="home" style="float: left; height: 490px; background-image: url(img/bg_image_1.jpg)">
+    <!-- Navbar -->
+    <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
+      <div class="container">
+        <a href="" class="navbar-brand">TermuxHackz Society</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
+          <span class="ti-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="index.html" class="nav-link" data-animate="scrolling">Home</a>
+            </li>
+            <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+          <ul class="nav ml-auto">
+            <li class="nav-item">
+              <button class="btn btn-fab btn-theme no-shadow">En</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- End Navbar -->
+
+   <!-- Caption header -->
+    <div class="caption-header text-center wow zoomInDown">
+      <h5 class="fw-normal">Welcome</h5>
+      <h1 class="fw-light mb-4">I'm <b class="fg-theme">AnonyminHack5 </b> Tech.</h1>
+      <div class="badge">Web Designer & Programmer</div>
+    </div> <!-- End Caption header -->
+    <div class="floating-button"><span class="ti-mouse"></span></div>
+  </div>
+
+<br>
+  <br>
+  	<div class="mode">
+        	<b>Dark mode:</b>
+        <span class="change">OFF</span>
+    	</div>
+
+    	<script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
+    <br/>
+    <br>
+
+  <br>
+  <br/>
+  	<div class="col-lg-6 offset-lg-1 wow fadeInRight">
+  		<h1 class="fw-light"><b>How to create a web defacing script without coding from scratch right from your terminal</b></h1>
+   <p class="text-muted">This Section</b> of this site will teach you how to create a web defacing script automatically in your terminal</p>
+  <br>
+
+  	<h4><b>What is Deface Script Creator?</b></h4>
+  	<p>Deface script creator is a python script which allows you to automatically create a web defacing script right from your terminal in CLI. It does pretty much the job and lets you create a good defacing script in less than 1min. Without having coding 3-6 hours. Makes it easier as well. So lets get on right into it.</p>
+
+
+ 	<!-- -->
+ 	<h4><b>How to Install Deface Script Creator</b></h4>
+ 	<p class="text-muted">Installation of Deface Script Creator is deemed easy and doesnt require much stress or fraustration, lol</p>
+
+ 	<br>
+ 	<div class="col-12 text-center py-3 wow fadeInUp">
+          <a href="#video" class="btn btn-theme">Watch How to create a defacing script</a>
+        </div>
+        <br>
+
+ 	<br/>
+ 	<h5 style="color: green"><b>Update and Upgrade your repo</b></h5>
+ 	<span class="post-date"><b>For Termux: </b><code> pkg update -y && pkg upgrade -y </code></span>
+ 	<br>
+ 	<span class="post-date"><b>For Linux: </b><code> sudo apt update -y && sudo apt upgrade -y </code></span>
+ 	<br>
+ 	<br/>
+ 	<h5 style="color: green"><b>Install git into your terminal</b></h5>
+ 	<span class="post-date"><b>For Termux: </b><code> pkg install git -y </code></span>
+ 	<br>
+ 	<span class="post-date"><b>For Linux: </b><code> sudo apt install git -y </code></span>
+
+ 	<br>
+ 	<br/>
+ 	<h5 style="color: green"><b>Clone the repository</b></h5>
+ 	<span class="post-date"><b>For Both: </b><code> git clone https://github.com/Zidan-ID17/Deface-Script-Creator</code></span>
+
+ 	<br>
+ 	<br/>
+ 	<h5 style="color: green"><b>Go into directory and grant permissions to all files</b></h5>
+ 	<span class="post-date"><b>For Both: </b><code> cd Deface-Script-Creator && chmod +x *</code></span>
+
+ 	<br/>
+ 	<br>
+ 	<h5 style="color: green"><b>Run the Script</b></h5>
+ 	<span class="post-date"><b>For Both: </b><code> python umbrella.py </code></span>
+
+ 	<br/>
+ 	<br>
+ 	<div class="img-place">
+ 		<img src="img/work/deface_script.png" alt="Deface Script">
+ 	</div>
+ 	<br/>
+ 	<br>
+ 	<p>I hope the installation of deface script has been cleared up and easy to use</p>
+ 	<br/>
+
+ 	<br>
+ 	<h5><b>This Video Shows how to use deface script creator</b></h5>
+ 	 <video width="270" height="240" id="video" target="_blank" controls>
+  		<source src="videos/deface_script_creator.mp4" type="video/mp4">
+	</video>
+		<div class="col-12 text-center py-3 wow fadeInUp">
+	<center>
+          <a href="videos/deface_script_creator.mp4" class="btn btn-theme" target="_blank" download>Download Video</a>
+        </center>
+        </div>
+</div>
+
+<div class="col-12 text-center py-3 wow fadeInUp">
+          <a href="blog-topbar.html" class="btn btn-theme">Go back</a>
+        </div>
+<br>
+
+          <!-- Footer -->
+  <div class="vg-footer" id="contact">
+    <h1 class="text-center">TermuxHackz | Contact Me</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 py-3">
+          <div class="footer-info">
+            <p>Where to find me</p>
+            <hr class="divider">
+            <p class="fs-large fg-white">Block D, First Tower of the Underworld, Earth</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 py-3">
+          <div class="float-lg-right">
+            <p>Follow me</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li><a href="https://facebook.com/AnonyminHack5" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com/AnonyminHack5" target="_blank">Twitter</a></li>
+              <li><a href="https://github.com/TermuxHackz" target="_blank">Github</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 py-3">
+          <div class="float-lg-right">
+            <p>Tools</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li><a href="tools/aisearch.html" target="_blank">AI Search Engine</a></li>
+              <li><a href="tools/base64decoder.html" target="_blank">Base64 Encoder/Decoder</a></li>
+              <li><a href="tools/video-to-gif.html" target="_blank">Convert Video to Gif</a></li>
+              <li><a href="tools/text-to-speech.html" target="_blank">Text to speech AI</a></li>
+            <li><a href="tools/qr-code-generator.html" target="_blank">QR Code Generator</a></li>
+            <li><a href="tools/essay-ai.html" target="_blank">Essay AI Writer</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="col-12">
+          <p class="text-center mb-0 mt-4">Copyright &copy;2023. All right reserved | This site is made with <span class="ti-heart fg-theme-red"></span> by <a href="https://github.com/TermuxHackz">TermuxHackz</a></p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End footer -->
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+
+  <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+
+  <script src="vendor/nice-select/js/jquery.nice-select.min.js"></script>
+
+  <script src="vendor/fancybox/js/jquery.fancybox.min.js"></script>
+
+  <script src="vendor/wow/wow.min.js"></script>
+
+  <script src="vendor/animateNumber/jquery.animateNumber.min.js"></script>
+
+  <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
+
+  <script src="js/google-maps.js"></script>
+
+  <script src="js/topbar-virtual.js"></script>
+
+</body>
+</html>
