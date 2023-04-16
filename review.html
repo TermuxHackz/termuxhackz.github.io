@@ -160,13 +160,13 @@ font-family: 'Stick No Bills', sans-serif;
 
     <div class="form-group">
         <h1>Write a Review</h1>
-        <div id="review-form" class="form-control">
+        <form id="review-form" class="form-control" method="post">
             <label for="name">Name: </label>
             <br>
-            <input type="text" id="name" class="form-control" name="name" required>
+            <input type="text" id="name" class="form-control" placeholder="John Doe..." name="name" required>
             <br/>
             <label for="email">Email: </label>
-            <input type="email" id="email" class="form-control" name="email" required>
+            <input type="email" id="email" class="form-control" placeholder="johndoe@doe.com..." name="email" required>
 
             <label for="rating">Rating: </label>
             <select id="rating" class="form-control" name="rating" required>
@@ -177,12 +177,11 @@ font-family: 'Stick No Bills', sans-serif;
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-
             <label for="message">Message: </label>
-            <textarea id="message" class="form-control bg-dark text-light mt-5" name="message" rows="5" required></textarea>
+            <textarea id="message" class="form-control bg-dark text-light mt-5" name="message" rows="5" placeholder="Your text goes here.." required></textarea>
 
             <button type="submit" onclick="submitReview()" class="btn btn-success">Submit</button>
-        </div>
+        </form>
         <br>
     </div>
 
@@ -191,25 +190,25 @@ font-family: 'Stick No Bills', sans-serif;
       </div>
   <br>
   <br>
-      <script src="../js/jquery-3.5.1.min.js"></script>
+      <script src="js/jquery-3.5.1.min.js"></script>
   
-      <script src="../js/bootstrap.bundle.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
     
-      <script src="../vendor/owl-carousel/owl.carousel.min.js"></script>
+      <script src="vendor/owl-carousel/owl.carousel.min.js"></script>
     
-      <script src="../vendor/isotope/isotope.pkgd.min.js"></script>
+      <script src="vendor/isotope/isotope.pkgd.min.js"></script>
     
-      <script src="../vendor/nice-select/js/jquery.nice-select.min.js"></script>
+      <script src="vendor/nice-select/js/jquery.nice-select.min.js"></script>
     
-      <script src="../vendor/fancybox/js/jquery.fancybox.min.js"></script>
+      <script src="vendor/fancybox/js/jquery.fancybox.min.js"></script>
     
-      <script src="../vendor/wow/wow.min.js"></script>
+      <script src="vendor/wow/wow.min.js"></script>
     
-      <script src="../vendor/animateNumber/jquery.animateNumber.min.js"></script>
+      <script src="vendor/animateNumber/jquery.animateNumber.min.js"></script>
     
-      <script src="../vendor/waypoints/jquery.waypoints.min.js"></script>
+      <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
     
-      <script src="../js/topbar-virtual.js"></script>
+      <script src="js/topbar-virtual.js"></script>
     
     
 </body>
